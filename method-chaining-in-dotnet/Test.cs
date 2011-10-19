@@ -17,7 +17,7 @@ namespace MethodChainingExample
                 .Random(20).With(x => x.AmountDue = generator.Next(500m, 1000m))
                 .Build();
 
-            //Find.SetInvoices(invoices);
+            Find.SetInvoices(invoices);
 
             var result = Find.Invoices.With(x => x.AmountDue > 500m).Execute();
 

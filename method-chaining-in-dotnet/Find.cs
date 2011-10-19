@@ -23,6 +23,11 @@ namespace MethodChainingExample
             return StoredInvoices.Where(InvoiceConstraint).ToList();
         }
 
-        protected IEnumerable<Invoice> StoredInvoices { get; set; }
+        protected static IEnumerable<Invoice> StoredInvoices { get; set; }
+
+        public static void SetInvoices(IList<Invoice> invoices)
+        {
+            StoredInvoices = invoices;
+        }
     }
 }
