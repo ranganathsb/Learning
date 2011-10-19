@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace MethodChainingExample
 {
-    public interface IInvoiceLink: IEnumerable<Invoice>
+    public interface IInvoiceLink
     {
         IInvoiceQueryLink With(Func<Invoice, bool> func);
     }
