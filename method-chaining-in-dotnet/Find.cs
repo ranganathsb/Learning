@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace MethodChainingExample
 {
@@ -19,7 +20,9 @@ namespace MethodChainingExample
         protected Func<Invoice, bool> InvoiceConstraint { get; set; }
         public IEnumerable<Invoice> Execute()
         {
-            throw new NotImplementedException();
+            return StoredInvoices.Where(InvoiceConstraint).ToList();
         }
+
+        protected IEnumerable<Invoice> StoredInvoices { get; set; }
     }
 }
