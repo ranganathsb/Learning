@@ -23,12 +23,5 @@ namespace MethodChainingExample
 
             Assert.That(result.Count(), Is.GreaterThan(20));
         }
-
-        [Test]
-        public void Branch_Test()
-        {
-            //this is a branch
-        }
-         
     }
 }
