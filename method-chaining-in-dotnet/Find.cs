@@ -25,7 +25,7 @@ namespace MethodChainingExample
 
         protected static IEnumerable<Invoice> StoredInvoices { get; set; }
 
-        public static void SetInvoices(IList<Invoice> invoices)
+        internal static void SetInvoices(IList<Invoice> invoices)
         {
             StoredInvoices = invoices;
         }
